@@ -14,3 +14,9 @@ npm i https fs
     "dev": "nodemon index.js"
   }
 ```
+
+## ENV
+```
+public/ // images etc.
+cert/   // https certificates
+```
