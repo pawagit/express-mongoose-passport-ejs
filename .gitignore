@@ -1,0 +1,4 @@
+public/
+cert/
+node_modules/
+.env
