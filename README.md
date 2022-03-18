@@ -15,8 +15,12 @@ npm i https fs
   }
 ```
 
-## ENV
+## Config
 ```
-public/ // images etc.
+public/ // static images etc.
 cert/   // https certificates
+
+ENV expects:
+- Database URI
+- Session Secret
 ```
