@@ -60,6 +60,6 @@ https.createServer(options, app).listen(port,() => {
 });
 
 // Register a user
-//UserDetails.register({ username: 'pawa', active: false }, 'pawa1234'); 
+//UserDetails.register({ username: 'default', active: false }, 'judi!hui23');
 
  

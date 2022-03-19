@@ -13,7 +13,14 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/secret', connectEnsureLogin.ensureLoggedIn(), (req, res) =>
-  res.render('secret', { title: 'Secret Page' })
+  res.render('secret', { title: 'Profile Page' })
+);
+
+/**
+ * GET /dashboard
+ */
+router.get('/dashboard', connectEnsureLogin.ensureLoggedIn(), (req, res) =>
+  res.render('dashboard', { title: 'Dashboard' })
 );
 
 router.get('/logout', (req, res) => {
