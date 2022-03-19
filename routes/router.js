@@ -5,15 +5,15 @@ const passport = require('passport');
 
 // GET Routes
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'pawacloud' });
 });
 
 router.get('/login', (req, res) => {
   res.render('login', { title: 'Login' });
 });
 
-router.get('/secret', connectEnsureLogin.ensureLoggedIn(), (req, res) =>
-  res.render('secret', { title: 'Profile Page' })
+router.get('/profile', connectEnsureLogin.ensureLoggedIn(), (req, res) =>
+  res.render('profile', { title: 'My Profile' })
 );
 
 /**
@@ -33,7 +33,7 @@ router.post(
   '/login',
   passport.authenticate('local', {
     failureRedirect: '/login',
-    successRedirect: '/secret',
+    successRedirect: '/profile',
   }),
   (req, res) => {
     console.log(req.user);
